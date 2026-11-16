@@ -2,3 +2,4 @@ Imagens de animais, frutas e veículos: Fluent Emoji (Microsoft), licença MIT (
 Fundo do jogo: Math Game Assets, HC Game Studios (uso livre, inclusive comercial).
 Música de fundo: airship.mp3 (enviado pelo usuário; autoria e licença a confirmar antes de publicar).
 Fonte Fredoka: The Fredoka Project Authors, licença SIL OFL 1.1 (ver fonts/OFL-Fredoka.txt).
+Bandeiras: Flag Pack, Kenney (www.kenney.nl), licença CC0.

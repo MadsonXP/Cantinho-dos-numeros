@@ -169,6 +169,41 @@ button:active:not(:disabled){box-shadow:0 .04rem 0 color-mix(in srgb,var(--c),#0
 .nogap .top>*+*,.nogap .tabs>*+*,.nogap .row>*+*,.nogap .row2>*+*,.nogap .zones>*+*,.nogap .eq>*+*,.nogap .shop>*+*,.nogap .train>*+*,.nogap .hr>*+*{margin-left:.5rem}
 .nogap .chips>*,.nogap .st>*,.nogap .seq>*,.nogap .tray>*,.nogap .zc>*,.nogap .orderrow>*,.nogap .pond>*{margin:.25rem}
 .nogap .tile>*+*{margin-top:.3rem}
+.dots{display:flex;justify-content:center;margin:.2rem 0 .4rem}
+.dots i{display:block;width:1.15rem;height:1.15rem;border-radius:50%;background:rgba(255,255,255,.75);border:.13rem solid #fff;margin:0 .17rem;box-shadow:0 .1rem 0 rgba(0,0,0,.15)}
+.dots i.ok{background:var(--leaf)}.dots i.bad{background:var(--tomato)}.dots i.cur{border-color:var(--sun);transform:scale(1.3)}
+.dots.mini{margin:0}.dots.mini i{width:.7rem;height:.7rem;margin:0 .1rem}
+h2.big{font-size:2.6rem;margin:.2rem 0}
+.rg{display:grid;grid-template-columns:repeat(2,1fr);gap:.5rem;margin:.8rem 0}
+.rc{display:flex;align-items:center;border-radius:1rem;padding:.5rem .6rem;background:#fff;color:#1f2a44;border-left:.4rem solid var(--leaf);text-align:left;font-weight:600}
+.rc.bad{border-left-color:var(--tomato);background:#ffecea}
+.rn{opacity:.5;width:1.4rem}.rt{flex:1;font-size:.95rem}.rk{margin-left:.3rem}
+.hr2{display:flex;align-items:center;justify-content:space-between}.hr2 b{font-size:1.4rem}.hg{font-size:1.8rem}
+.pkr{display:flex;margin:.6rem 0}.pk{flex:1;margin:0 .3rem;padding:.7rem .2rem;display:flex;flex-direction:column;align-items:center}
+.pkb{display:flex;align-items:center;font-size:2.6rem;line-height:1}.pkb b{font-size:1.4rem;margin-left:.3rem}
+.pkp{background:rgba(0,0,0,.25);border-radius:1rem;padding:.1rem .7rem;margin-top:.4rem;font-weight:700;font-size:1.05rem}
+.opn{margin-top:12vh}.pkopen{--c:#8a5bff;width:9rem;height:11rem;font-size:4.5rem;animation:shk 1s infinite}
+@keyframes shk{0%,100%{transform:rotate(0)}25%{transform:rotate(-5deg)}75%{transform:rotate(5deg)}}
+.cg{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem}
+.ci{--c:#fff;color:#1f2a44;text-shadow:none;padding:.5rem .3rem;display:flex;flex-direction:column;align-items:center;font-size:.8rem;position:relative}
+.ci span{margin-top:.3rem;line-height:1.1}
+.ci.off{background:rgba(255,255,255,.55);border-radius:1.1rem;color:rgba(31,42,68,.4);font-weight:700}
+.ci.off .fl{-webkit-filter:brightness(0);filter:brightness(0);opacity:.12;box-shadow:none}
+.ci em{position:absolute;top:-.4rem;right:-.2rem;background:var(--tomato);color:#fff;font-style:normal;font-weight:700;font-size:.65rem;padding:.1rem .45rem;border-radius:1rem}
+.fl{display:block;width:100%;height:auto;border-radius:.4rem;box-shadow:0 .1rem .3rem rgba(0,0,0,.3)}
+.cc{max-width:22rem;margin:.8rem auto;background:#fff;color:#1f2a44;border:.4rem solid var(--k);border-radius:1.6rem;padding:1rem;box-shadow:0 .4rem 0 rgba(0,0,0,.15)}
+.cf{padding:.3rem}.cn{font-size:2rem;font-weight:700;margin:.5rem 0}.cr{font-size:1.15rem;margin:.2rem 0}.cq{background:#f3f6ff;border-radius:1rem;padding:.6rem .8rem;margin-top:.7rem;font-size:1.05rem}
+.tag{display:inline-block;margin-top:.8rem;padding:.3rem 1.2rem;border-radius:2rem;font-weight:700;font-size:1.3rem;color:#fff}.tag.nova{background:var(--tomato)}.tag.rep{background:var(--sea)}
+.pop{animation:pop .5s}
+@media (min-width:700px){.cg{grid-template-columns:repeat(6,1fr)}.rg{grid-template-columns:repeat(3,1fr)}}
+.sec{display:flex;justify-content:space-between;align-items:center;margin:1.1rem 0 .6rem;padding:.4rem .9rem;border-radius:1rem;background:#fff;color:#1f2a44;font-weight:700;border-left:.5rem solid var(--sea);box-shadow:0 .2rem 0 rgba(31,42,68,.12)}
+.sec b{background:var(--sun);color:#5a3b00;border-radius:1rem;padding:0 .7rem;font-size:.95rem}
+.goldtag{display:inline-block;margin:.1rem 0 .4rem;padding:.2rem 1rem;border-radius:2rem;background:linear-gradient(#ffe066,#ffb400);color:#5a3b00;font-weight:700;font-size:1.2rem;box-shadow:0 .2rem 0 #c98e00;animation:gl 1s ease-in-out infinite}
+@keyframes gl{50%{transform:scale(1.08)}}
+.goldtag~.card{box-shadow:0 0 0 .3rem #ffd34d,0 0 1.4rem rgba(255,190,0,.8)}
+.dots i.g{box-shadow:0 0 0 .15rem #ffc21a}
+.bonus{display:inline-block;margin-top:.6rem;padding:.3rem 1.2rem;border-radius:2rem;background:linear-gradient(#ffe066,#ffb400);color:#5a3b00;font-weight:700;font-size:1.4rem;animation:pop .6s}
+.rc.gd{border-left-color:var(--sun);background:#fff8dc}.gb{color:#b07a00}
 </style>
 </head>
 <body>
@@ -207,16 +242,18 @@ function burst(){
     s.textContent=["🎉","⭐","✨","🎈"][i%4];s.style.left=R(5,90)+'%';s.style.animationDelay=(i*0.04)+'s';
     document.body.appendChild(s);setTimeout(()=>s.remove(),1700);}
 }
-function barra(){
+function barra0(){
   return `<div class="top"><button onclick="try{speechSynthesis.cancel()}catch(e){};home()">🏠</button><span id="st">⭐ ${ST.stars}</span><button onclick="setup(G)">⚙️</button><button onclick="volPanel()">🎵</button>${ST.vz===true?'<button onclick="say(spoken)">🔊</button>':''}</div>`;
 }
 function fin(ok,html,voice){
-  ST.stars+=ok?2:1;burst();sfx(ok?'win':'ok');
-  save();const s=document.getElementById('st');if(s)s.textContent='⭐ '+ST.stars;
-  document.querySelectorAll('.card button').forEach(b=>b.disabled=true);
-  const extra='<br>+'+(ok?2:1)+' ⭐';
-  msg.innerHTML=html+extra;
-  const n=document.createElement('button');n.className='go';n.textContent='➡️';n.onclick=()=>cur();
+  var qi=Q?Q.res.length:0,mult=Q&&Q.gold[qi]?Q.gold[qi]:0,gain=ok?(mult||1):0;
+  if(ok){ST.stars+=gain;burst();if(mult)setTimeout(burst,350);}
+  sfx(ok?'win':'ok');
+  if(Q){Q.res.push({ok:ok,g:G,gain:gain,gold:mult,t:(html.split('<br>')[1]||voice.replace(/^(Isso mesmo!|Isso!|Muito bem!|Agora sim!)\s*/,'')).replace(/<[^>]*>/g,'')});var dd=document.getElementById('dots');if(dd)dd.innerHTML=dotsHTML();}
+  save();var s=document.getElementById('st');if(s)s.textContent='⭐ '+ST.stars;
+  document.querySelectorAll('.card button').forEach(function(b){b.disabled=true;});
+  msg.innerHTML=html+(ok?'<br>+'+gain+' ⭐'+(mult?' ✨':''):'');
+  var n=document.createElement('button');n.className='go';n.textContent=(Q&&Q.res.length>=10)?'🏆':'➡️';n.onclick=nextQ;
   msg.after(n);var pm=praiseMsg(ok,voice);if(pm!==null)say(pm);
 }
 
@@ -229,14 +266,14 @@ function cat(c){GCAT=c;document.getElementById('jg').innerHTML=gamesHTML();}
 function pgSync(){const p=document.getElementById('pager');if(!p)return;const i=Math.round(p.scrollLeft/p.clientWidth);[0,1,2].forEach(k=>document.getElementById('nv'+k).classList.toggle('on',k===i));}
 function goPg(i){const p=document.getElementById('pager');p.scrollTo({left:i*p.clientWidth,behavior:'smooth'});}
 function home(){
-  cur=home;
-  app.innerHTML=`<div class="top"><span id="st">⭐ ${ST.stars}</span><span class="tb"><button onclick="volPanel()">🎵</button><button onclick="config()">⚙️</button></span></div>
+  cur=home;Q=null;
+  app.innerHTML=`<div class="top"><span id="st">⭐ ${ST.stars}</span><span class="tb"><button onclick="hist()">📊</button><button onclick="volPanel()">🎵</button><button onclick="config()">⚙️</button></span></div>
   <div class="pager" id="pager" onscroll="pgSync()">
-  <div class="pg"><div class="card soon"><div class="bear">🛒</div><div class="ask">Loja</div><div class="hint">Em breve</div></div></div>
+  <div class="pg" id="pgl">${lojaHTML()}</div>
   <div class="pg jg" id="jg">${gamesHTML()}</div>
-  <div class="pg"><div class="card soon"><div class="bear">📒</div><div class="ask">Coleção</div><div class="hint">Em breve</div></div></div></div>
+  <div class="pg" id="pgc">${colHTML()}</div></div>
   <div class="tabs"><button class="nv" id="nv0" onclick="goPg(0)">🛒</button><button class="nv" id="nv1" onclick="goPg(1)">🎮</button><button class="nv" id="nv2" onclick="goPg(2)">📒</button></div>`;
-  const p=document.getElementById('pager');p.scrollLeft=p.clientWidth;pgSync();
+  const p=document.getElementById('pager');p.scrollLeft=p.clientWidth*HP;HP=1;pgSync();
   
 }
 function config(){
@@ -250,7 +287,7 @@ function config(){
 
 /* ---------- Tela de configuração de cada jogo ---------- */
 function setup(g){
-  G=g;K=ST.cfg[g];cur=GM[g].f;const M=GM[g];
+  G=g;K=ST.cfg[g];cur=GM[g].f;Q=null;const M=GM[g];
   const ops=[...M.ops].map(o=>`<button class="chip ${K.ops.includes(o)?'on':''}" onclick="toggleOp('${o}')">${OPS[o][0]} ${g==='mon'?(o==='p'?'Colocar':'Tirar'):g==='mer'?(o==='p'?'Total':'Troco'):OPS[o][1]}</button>`).join('');
   const range=`<div class="card"><div class="ask">Números: ${K.min} a ${K.max}</div>
   <div class="chips">${[5,10,20,50,100].map(m=>`<button class="chip ${K.max===m&&K.min===0?'on':''}" onclick="setRange(0,${m})">0–${m}</button>`).join('')}</div>
@@ -259,7 +296,7 @@ function setup(g){
   app.innerHTML=`<div class="top"><button onclick="home()">🏠</button><span></span></div><h1>${M.n}</h1>
   ${M.num===false?'':range}${M.lv?lv:''}
   ${M.ops?`<div class="card"><div class="ask">Operações</div><div class="chips">${ops}</div></div>`:(M.h?`<div class="hint">${M.h}</div>`:'')}
-  <button class="go" onclick="GM['${g}'].f()">▶️ Jogar!</button>`;
+  <button class="go" onclick="startTest('${g}')">▶️ Jogar!</button>`;
 }
 function setLv(n){K.lv=n;save();setup(G);}
 function setRange(a,b){
@@ -564,11 +601,87 @@ function praiseMsg(ok,voice){
   }
   var i;do{i=R(0,PRS.length-1);}while(i===LPI);LPI=i;return PRS[i]+' '+base;
 }
+let Q=null,HP=1,P=null;
+ST.packs=ST.packs||[];ST.col=ST.col||{};ST.newc=ST.newc||{};ST.hist=ST.hist||[];
+const PK=[{n:1,p:10,c:'#2f7bff'},{n:3,p:25,c:'#8a5bff'},{n:5,p:45,c:'#ff8a1f'}];
+const CCOL={'América do Sul':'#2fcb7b','América do Norte':'#2f7bff','América Central':'#19b5e8','Europa':'#8a5bff','Ásia':'#ff5a4e','África':'#ff8a1f','Oceania':'#e64980','Europa e Ásia':'#8a5bff','Ásia e Europa':'#ff5a4e'};
+const PAISES=[{"c": "AR", "n": "Argentina", "cap": "Buenos Aires", "ct": "América do Sul", "cu": "Tem a Patagônia, com geleiras enormes."}, {"c": "BO", "n": "Bolívia", "cap": "La Paz e Sucre", "ct": "América do Sul", "cu": "Tem o maior deserto de sal do mundo, o Salar de Uyuni."}, {"c": "BR", "n": "Brasil", "cap": "Brasília", "ct": "América do Sul", "cu": "Abriga a maior parte da Floresta Amazônica."}, {"c": "CL", "n": "Chile", "cap": "Santiago", "ct": "América do Sul", "cu": "É um país bem comprido e estreito."}, {"c": "CO", "n": "Colômbia", "cap": "Bogotá", "ct": "América do Sul", "cu": "É famosa pelo seu café."}, {"c": "EC", "n": "Equador", "cap": "Quito", "ct": "América do Sul", "cu": "O nome vem da linha do Equador, que passa por lá."}, {"c": "GY", "n": "Guiana", "cap": "Georgetown", "ct": "América do Sul", "cu": "Lá se fala inglês, o único país assim na América do Sul."}, {"c": "PY", "n": "Paraguai", "cap": "Assunção", "ct": "América do Sul", "cu": "Lá se fala espanhol e guarani."}, {"c": "PE", "n": "Peru", "cap": "Lima", "ct": "América do Sul", "cu": "Lá fica a cidade antiga de Machu Picchu."}, {"c": "SR", "n": "Suriname", "cap": "Paramaribo", "ct": "América do Sul", "cu": "Lá se fala holandês."}, {"c": "UY", "n": "Uruguai", "cap": "Montevidéu", "ct": "América do Sul", "cu": "Ganhou a primeira Copa do Mundo, em 1930."}, {"c": "VE", "n": "Venezuela", "cap": "Caracas", "ct": "América do Sul", "cu": "Tem o Salto Ângel, a cachoeira mais alta do mundo."}, {"c": "CA", "n": "Canadá", "cap": "Ottawa", "ct": "América do Norte", "cu": "Tem uma folha de bordo na bandeira."}, {"c": "US", "n": "Estados Unidos", "cap": "Washington, D.C.", "ct": "América do Norte", "cu": "Tem a Estátua da Liberdade."}, {"c": "MX", "n": "México", "cap": "Cidade do México", "ct": "América do Norte", "cu": "Tem pirâmides muito antigas, como Chichén Itzá."}, {"c": "BS", "n": "Bahamas", "cap": "Nassau", "ct": "América Central", "cu": "É formado por centenas de ilhas."}, {"c": "BZ", "n": "Belize", "cap": "Belmopan", "ct": "América Central", "cu": "Lá se fala inglês."}, {"c": "CR", "n": "Costa Rica", "cap": "San José", "ct": "América Central", "cu": "Não tem exército e tem muitas florestas."}, {"c": "CU", "n": "Cuba", "cap": "Havana", "ct": "América Central", "cu": "É uma ilha no mar do Caribe."}, {"c": "SV", "n": "El Salvador", "cap": "San Salvador", "ct": "América Central", "cu": "É o menor país da América Central."}, {"c": "GT", "n": "Guatemala", "cap": "Cidade da Guatemala", "ct": "América Central", "cu": "Tem vulcões e antigas pirâmides maias."}, {"c": "HT", "n": "Haiti", "cap": "Porto Príncipe", "ct": "América Central", "cu": "Divide uma ilha com a República Dominicana."}, {"c": "HN", "n": "Honduras", "cap": "Tegucigalpa", "ct": "América Central", "cu": "Tem as ruínas maias de Copán."}, {"c": "JM", "n": "Jamaica", "cap": "Kingston", "ct": "América Central", "cu": "Lá nasceu o reggae."}, {"c": "NI", "n": "Nicarágua", "cap": "Manágua", "ct": "América Central", "cu": "Tem muitos lagos e vulcões."}, {"c": "PA", "n": "Panamá", "cap": "Cidade do Panamá", "ct": "América Central", "cu": "Tem o Canal do Panamá, que liga dois oceanos."}, {"c": "DO", "n": "República Dominicana", "cap": "Santo Domingo", "ct": "América Central", "cu": "Tem praias lindas no mar do Caribe."}, {"c": "DE", "n": "Alemanha", "cap": "Berlim", "ct": "Europa", "cu": "Tem castelos que parecem de contos de fadas."}, {"c": "AT", "n": "Áustria", "cap": "Viena", "ct": "Europa", "cu": "Lá nasceu o compositor Mozart."}, {"c": "BE", "n": "Bélgica", "cap": "Bruxelas", "ct": "Europa", "cu": "É famosa pelos chocolates e waffles."}, {"c": "BG", "n": "Bulgária", "cap": "Sófia", "ct": "Europa", "cu": "É famosa pelo seu iogurte."}, {"c": "HR", "n": "Croácia", "cap": "Zagreb", "ct": "Europa", "cu": "Tem mais de mil ilhas no mar Adriático."}, {"c": "DK", "n": "Dinamarca", "cap": "Copenhague", "ct": "Europa", "cu": "O brinquedo Lego nasceu lá."}, {"c": "ES", "n": "Espanha", "cap": "Madri", "ct": "Europa", "cu": "Lá se dança o flamenco."}, {"c": "FI", "n": "Finlândia", "cap": "Helsinque", "ct": "Europa", "cu": "Lá fica a vila do Papai Noel."}, {"c": "FR", "n": "França", "cap": "Paris", "ct": "Europa", "cu": "Tem a famosa Torre Eiffel."}, {"c": "GR", "n": "Grécia", "cap": "Atenas", "ct": "Europa", "cu": "Os Jogos Olímpicos começaram lá."}, {"c": "HU", "n": "Hungria", "cap": "Budapeste", "ct": "Europa", "cu": "O rio Danúbio passa pela capital."}, {"c": "IE", "n": "Irlanda", "cap": "Dublin", "ct": "Europa", "cu": "É chamada de Ilha Esmeralda por ser muito verde."}, {"c": "IS", "n": "Islândia", "cap": "Reykjavik", "ct": "Europa", "cu": "Tem vulcões e gêiseres."}, {"c": "IT", "n": "Itália", "cap": "Roma", "ct": "Europa", "cu": "A pizza nasceu em Nápoles."}, {"c": "LU", "n": "Luxemburgo", "cap": "Luxemburgo", "ct": "Europa", "cu": "É um dos menores países da Europa."}, {"c": "MT", "n": "Malta", "cap": "Valeta", "ct": "Europa", "cu": "Fica em ilhas no mar Mediterrâneo."}, {"c": "MC", "n": "Mônaco", "cap": "Mônaco", "ct": "Europa", "cu": "É um dos menores países do mundo."}, {"c": "NO", "n": "Noruega", "cap": "Oslo", "ct": "Europa", "cu": "Tem fiordes, vales fundos cheios de água."}, {"c": "NL", "n": "Países Baixos", "cap": "Amsterdã", "ct": "Europa", "cu": "Tem muitas bicicletas e moinhos de vento."}, {"c": "PL", "n": "Polônia", "cap": "Varsóvia", "ct": "Europa", "cu": "Lá nasceu a cientista Marie Curie."}, {"c": "PT", "n": "Portugal", "cap": "Lisboa", "ct": "Europa", "cu": "Lá se fala português, como no Brasil."}, {"c": "GB", "n": "Reino Unido", "cap": "Londres", "ct": "Europa", "cu": "Tem o relógio gigante Big Ben."}, {"c": "RO", "n": "Romênia", "cap": "Bucareste", "ct": "Europa", "cu": "Tem o castelo de Bran, ligado à lenda do Drácula."}, {"c": "RU", "n": "Rússia", "cap": "Moscou", "ct": "Europa e Ásia", "cu": "É o maior país do mundo."}, {"c": "RS", "n": "Sérvia", "cap": "Belgrado", "ct": "Europa", "cu": "A capital fica onde dois rios se encontram."}, {"c": "SE", "n": "Suécia", "cap": "Estocolmo", "ct": "Europa", "cu": "Tem muitos lagos e florestas."}, {"c": "CH", "n": "Suíça", "cap": "Berna", "ct": "Europa", "cu": "É famosa pelos chocolates e relógios."}, {"c": "CZ", "n": "Tchéquia", "cap": "Praga", "ct": "Europa", "cu": "Tem muitos castelos antigos."}, {"c": "UA", "n": "Ucrânia", "cap": "Kiev", "ct": "Europa", "cu": "Produz muito trigo e girassóis."}, {"c": "VA", "n": "Vaticano", "cap": "Cidade do Vaticano", "ct": "Europa", "cu": "É o menor país do mundo."}, {"c": "SA", "n": "Arábia Saudita", "cap": "Riade", "ct": "Ásia", "cu": "Tem muito deserto e camelos."}, {"c": "BD", "n": "Bangladesh", "cap": "Daca", "ct": "Ásia", "cu": "Tem muitos rios e é muito verde."}, {"c": "KH", "n": "Camboja", "cap": "Phnom Penh", "ct": "Ásia", "cu": "Tem o grande templo de Angkor Wat."}, {"c": "QA", "n": "Catar", "cap": "Doha", "ct": "Ásia", "cu": "Sediou a Copa do Mundo de 2022."}, {"c": "KZ", "n": "Cazaquistão", "cap": "Astana", "ct": "Ásia", "cu": "É o maior país do mundo sem litoral."}, {"c": "CN", "n": "China", "cap": "Pequim", "ct": "Ásia", "cu": "Tem a Grande Muralha."}, {"c": "KR", "n": "Coreia do Sul", "cap": "Seul", "ct": "Ásia", "cu": "Lá nasceu o K-pop."}, {"c": "AE", "n": "Emirados Árabes Unidos", "cap": "Abu Dabi", "ct": "Ásia", "cu": "Em Dubai fica o prédio mais alto do mundo."}, {"c": "PH", "n": "Filipinas", "cap": "Manila", "ct": "Ásia", "cu": "Tem mais de 7 mil ilhas."}, {"c": "IN", "n": "Índia", "cap": "Nova Délhi", "ct": "Ásia", "cu": "Tem o lindo Taj Mahal."}, {"c": "ID", "n": "Indonésia", "cap": "Jacarta", "ct": "Ásia", "cu": "Tem mais de 17 mil ilhas."}, {"c": "IR", "n": "Irã", "cap": "Teerã", "ct": "Ásia", "cu": "No passado era chamado de Pérsia."}, {"c": "IQ", "n": "Iraque", "cap": "Bagdá", "ct": "Ásia", "cu": "Lá nasceu uma das primeiras civilizações, a Mesopotâmia."}, {"c": "JP", "n": "Japão", "cap": "Tóquio", "ct": "Ásia", "cu": "Tem trens-bala muito rápidos."}, {"c": "JO", "n": "Jordânia", "cap": "Amã", "ct": "Ásia", "cu": "Tem a cidade antiga de Petra, esculpida na rocha."}, {"c": "MY", "n": "Malásia", "cap": "Kuala Lumpur", "ct": "Ásia", "cu": "Tem as torres gêmeas Petronas."}, {"c": "MN", "n": "Mongólia", "cap": "Ulan Bator", "ct": "Ásia", "cu": "Tem campos enormes e muitos cavalos."}, {"c": "NP", "n": "Nepal", "cap": "Catmandu", "ct": "Ásia", "cu": "Tem o Monte Everest, a montanha mais alta do mundo."}, {"c": "PK", "n": "Paquistão", "cap": "Islamabad", "ct": "Ásia", "cu": "Tem a segunda montanha mais alta do mundo, o K2."}, {"c": "SG", "n": "Singapura", "cap": "Singapura", "ct": "Ásia", "cu": "É uma cidade que também é um país bem pequeno."}, {"c": "TH", "n": "Tailândia", "cap": "Bangkok", "ct": "Ásia", "cu": "Tem templos dourados e muitos elefantes."}, {"c": "TR", "n": "Turquia", "cap": "Ancara", "ct": "Ásia e Europa", "cu": "Fica entre dois continentes."}, {"c": "VN", "n": "Vietnã", "cap": "Hanói", "ct": "Ásia", "cu": "Tem a Baía de Ha Long, com ilhas de pedra."}, {"c": "ZA", "n": "África do Sul", "cap": "Pretória", "ct": "África", "cu": "Tem três capitais."}, {"c": "AO", "n": "Angola", "cap": "Luanda", "ct": "África", "cu": "Lá se fala português, como no Brasil."}, {"c": "DZ", "n": "Argélia", "cap": "Argel", "ct": "África", "cu": "É o maior país da África."}, {"c": "CV", "n": "Cabo Verde", "cap": "Praia", "ct": "África", "cu": "É formado por ilhas no oceano Atlântico."}, {"c": "EG", "n": "Egito", "cap": "Cairo", "ct": "África", "cu": "Tem as grandes pirâmides."}, {"c": "ET", "n": "Etiópia", "cap": "Adis Abeba", "ct": "África", "cu": "É conhecida como o berço do café."}, {"c": "GH", "n": "Gana", "cap": "Acra", "ct": "África", "cu": "Produz muito cacau, o ingrediente do chocolate."}, {"c": "MG", "n": "Madagascar", "cap": "Antananarivo", "ct": "África", "cu": "Tem lêmures, que só vivem lá."}, {"c": "MA", "n": "Marrocos", "cap": "Rabat", "ct": "África", "cu": "Tem cidades com casinhas azuis e mercados coloridos."}, {"c": "MZ", "n": "Moçambique", "cap": "Maputo", "ct": "África", "cu": "Lá se fala português, como no Brasil."}, {"c": "NA", "n": "Namíbia", "cap": "Windhoek", "ct": "África", "cu": "Tem um deserto que encontra o mar."}, {"c": "NG", "n": "Nigéria", "cap": "Abuja", "ct": "África", "cu": "É o país com mais gente na África."}, {"c": "KE", "n": "Quênia", "cap": "Nairóbi", "ct": "África", "cu": "Tem savanas com leões, zebras e girafas."}, {"c": "CD", "n": "RD Congo", "cap": "Kinshasa", "ct": "África", "cu": "Tem uma floresta enorme com gorilas."}, {"c": "SN", "n": "Senegal", "cap": "Dacar", "ct": "África", "cu": "Tem o Lago Rosa, de água cor-de-rosa."}, {"c": "TZ", "n": "Tanzânia", "cap": "Dodoma", "ct": "África", "cu": "Tem o Monte Kilimanjaro, o mais alto da África."}, {"c": "TN", "n": "Tunísia", "cap": "Túnis", "ct": "África", "cu": "Parte do deserto do Saara fica lá."}, {"c": "ZW", "n": "Zimbábue", "cap": "Harare", "ct": "África", "cu": "Tem as Cataratas Vitória, enormes quedas d'água."}, {"c": "AU", "n": "Austrália", "cap": "Camberra", "ct": "Oceania", "cu": "Tem cangurus e coalas."}, {"c": "FJ", "n": "Fiji", "cap": "Suva", "ct": "Oceania", "cu": "Tem ilhas com praias lindas."}, {"c": "NZ", "n": "Nova Zelândia", "cap": "Wellington", "ct": "Oceania", "cu": "Tem mais ovelhas do que pessoas."}, {"c": "PG", "n": "Papua-Nova Guiné", "cap": "Porto Moresby", "ct": "Oceania", "cu": "Lá se falam mais de 800 línguas."}];
+const FLG={"AR": "flags/AR.svg", "BO": "flags/BO.svg", "BR": "flags/BR.svg", "CL": "flags/CL.svg", "CO": "flags/CO.svg", "EC": "flags/EC.svg", "GY": "flags/GY.svg", "PY": "flags/PY.svg", "PE": "flags/PE.svg", "SR": "flags/SR.svg", "UY": "flags/UY.svg", "VE": "flags/VE.svg", "CA": "flags/CA.svg", "US": "flags/US.svg", "MX": "flags/MX.svg", "BS": "flags/BS.svg", "BZ": "flags/BZ.svg", "CR": "flags/CR.svg", "CU": "flags/CU.svg", "SV": "flags/SV.svg", "GT": "flags/GT.svg", "HT": "flags/HT.svg", "HN": "flags/HN.svg", "JM": "flags/JM.svg", "NI": "flags/NI.svg", "PA": "flags/PA.svg", "DO": "flags/DO.svg", "DE": "flags/DE.svg", "AT": "flags/AT.svg", "BE": "flags/BE.svg", "BG": "flags/BG.svg", "HR": "flags/HR.svg", "DK": "flags/DK.svg", "ES": "flags/ES.svg", "FI": "flags/FI.svg", "FR": "flags/FR.svg", "GR": "flags/GR.svg", "HU": "flags/HU.svg", "IE": "flags/IE.svg", "IS": "flags/IS.svg", "IT": "flags/IT.svg", "LU": "flags/LU.svg", "MT": "flags/MT.svg", "MC": "flags/MC.svg", "NO": "flags/NO.svg", "NL": "flags/NL.svg", "PL": "flags/PL.svg", "PT": "flags/PT.svg", "GB": "flags/GB.svg", "RO": "flags/RO.svg", "RU": "flags/RU.svg", "RS": "flags/RS.svg", "SE": "flags/SE.svg", "CH": "flags/CH.svg", "CZ": "flags/CZ.svg", "UA": "flags/UA.svg", "VA": "flags/VA.svg", "SA": "flags/SA.svg", "BD": "flags/BD.svg", "KH": "flags/KH.svg", "QA": "flags/QA.svg", "KZ": "flags/KZ.svg", "CN": "flags/CN.svg", "KR": "flags/KR.svg", "AE": "flags/AE.svg", "PH": "flags/PH.svg", "IN": "flags/IN.svg", "ID": "flags/ID.svg", "IR": "flags/IR.svg", "IQ": "flags/IQ.svg", "JP": "flags/JP.svg", "JO": "flags/JO.svg", "MY": "flags/MY.svg", "MN": "flags/MN.svg", "NP": "flags/NP.svg", "PK": "flags/PK.svg", "SG": "flags/SG.svg", "TH": "flags/TH.svg", "TR": "flags/TR.svg", "VN": "flags/VN.svg", "ZA": "flags/ZA.svg", "AO": "flags/AO.svg", "DZ": "flags/DZ.svg", "CV": "flags/CV.svg", "EG": "flags/EG.svg", "ET": "flags/ET.svg", "GH": "flags/GH.svg", "MG": "flags/MG.svg", "MA": "flags/MA.svg", "MZ": "flags/MZ.svg", "NA": "flags/NA.svg", "NG": "flags/NG.svg", "KE": "flags/KE.svg", "CD": "flags/CD.svg", "SN": "flags/SN.svg", "TZ": "flags/TZ.svg", "TN": "flags/TN.svg", "ZW": "flags/ZW.svg", "AU": "flags/AU.svg", "FJ": "flags/FJ.svg", "NZ": "flags/NZ.svg", "PG": "flags/PG.svg"};
+const flag=function(c){return '<img class="fl" src="'+FLG[c]+'" alt="">';};
+const pais=function(c){return PAISES.filter(function(p){return p.c===c;})[0];};
+
+/* ---------- Teste de 10 questões ---------- */
+function dotsHTML(){var h='';for(var i=0;i<10;i++){var x=Q.res[i],c=i<Q.res.length?(x.ok?'ok':'bad')+(x.gold?' g':''):(i===Q.res.length?'cur':'');h+='<i class="'+c+'"></i>';}return h;}
+function barra(){var m=Q&&Q.gold[Q.res.length];return barra0()+(Q?'<div class="dots" id="dots">'+dotsHTML()+'</div>':'')+(m?'<div class="goldtag">⭐ ×'+m+'</div>':'');}
+function startTest(g){G=g;K=ST.cfg[g];var n=R(1,2),gd={};while(Object.keys(gd).length<n)gd[R(0,9)]=R(2,3);Q={res:[],gold:gd};GM[g].f();}
+function nextQ(){if(Q&&Q.res.length>=10)return resultado();cur();}
+function resultado(){
+  if(Q.done)return;Q.done=true;
+  var r=Q.res,sc=r.filter(function(x){return x.ok;}).length,g=G,earned=r.reduce(function(a,x){return a+x.gain;},0),bonus=sc>=10?3:sc===9?2:sc>=7?1:0;
+  ST.stars+=bonus;ST.hist.unshift({g:g,d:Date.now(),s:sc,r:r.map(function(x){return x.ok?1:0;})});ST.hist=ST.hist.slice(0,5);save();
+  var medal=sc>=10?'🥇':sc===9?'🥈':'🥉';
+  var cards=r.map(function(x,i){return '<div class="rc '+(x.ok?'ok':'bad')+(x.gold?' gd':'')+'"><span class="rn">'+(i+1)+'</span><span class="rt">'+(x.gold?'<b class="gb">⭐×'+x.gold+'</b> ':'')+(x.t||GM[x.g].n.split(' ')[0])+'</span><span class="rk">'+(x.ok?'✅':'❌')+'</span></div>';}).join('');
+  app.innerHTML='<div class="top"><button onclick="home()">🏠</button><span id="st">⭐ '+ST.stars+'</span><span></span></div><div class="card"><div class="bear">🏆</div><h2 class="big">'+sc+' de 10</h2><div class="ask">+'+earned+' ⭐</div>'+(bonus?'<div class="bonus">'+medal+' +'+bonus+' ⭐</div>':'')+'</div><div class="rg">'+cards+'</div><button class="go" onclick="startTest(\''+g+'\')">🔁</button>';
+  sfx('win');
+}
+function hist(){
+  var rows=ST.hist.length?ST.hist.map(function(h){var d=new Date(h.d);return '<div class="card hr2"><span class="hg">'+GM[h.g].n.split(' ')[0]+'</span><span>'+d.getDate()+'/'+(d.getMonth()+1)+'</span><b>'+h.s+'/10</b><span class="dots mini">'+h.r.map(function(k){return '<i class="'+(k?'ok':'bad')+'"></i>';}).join('')+'</span></div>';}).join(''):'<div class="card"><div class="hint">Ainda não há testes</div></div>';
+  app.innerHTML='<div class="top"><button onclick="home()">🏠</button><span></span></div><h1>📊</h1>'+rows;
+}
+
+/* ---------- Loja ---------- */
+function lojaHTML(){
+  var np=ST.packs.length;
+  var h='<div class="card"><div class="ask">🌍</div><div class="cnt">⭐ '+ST.stars+'</div><div class="pkr">'+PK.map(function(k,i){return '<button class="pk" style="--c:'+k.c+'" onclick="comprar('+i+')"'+(ST.stars<k.p?' disabled':'')+'><span class="pkb">🌍<b>×'+k.n+'</b></span><span class="pkp">⭐ '+k.p+'</span></button>';}).join('')+'</div></div>';
+  if(np)h+='<button class="go" onclick="abrir()">🎁 '+np+'</button>';
+  return h;
+}
+function comprar(i){var k=PK[i];if(ST.stars<k.p)return;ST.stars-=k.p;ST.packs.push({n:k.n,p:k.p});save();sfx('ok');refreshHome();}
+function refreshHome(){var l=document.getElementById('pgl'),c=document.getElementById('pgc'),s=document.getElementById('st');if(l)l.innerHTML=lojaHTML();if(c)c.innerHTML=colHTML();if(s)s.textContent='⭐ '+ST.stars;}
+function abrir(){
+  var pk=ST.packs.shift();if(!pk)return;
+  var r=[];for(var i=0;i<pk.n;i++){
+    var c=PAISES[R(0,PAISES.length-1)].c,novo=!ST.col[c],rf=0;
+    if(novo){ST.col[c]=1;ST.newc[c]=1;}else{rf=Math.floor(pk.p/pk.n/2);ST.stars+=rf;}
+    r.push({c:c,novo:novo,rf:rf});
+  }
+  save();P={r:r,i:-1};HP=0;cur=home;
+  app.innerHTML='<div class="top"><button onclick="home()">🏠</button><span id="st">⭐ '+ST.stars+'</span><span></span></div><div class="opn"><button class="pkopen" onclick="revelar()"><span class="pkb">🌍</span></button></div>';
+  sfx('ok');
+}
+function revelar(){
+  P.i++;
+  if(P.i>=P.r.length){HP=2;home();return;}
+  var x=P.r[P.i],last=P.i===P.r.length-1;
+  var tag=x.novo?'<div class="tag nova">NOVA!</div>':'<div class="tag rep">+'+x.rf+' ⭐</div>';
+  app.innerHTML='<div class="top"><button onclick="HP=2;home()">🏠</button><span id="st">⭐ '+ST.stars+'</span><span></span></div>'+tag+'<div class="pop">'+cardHTML(x.c)+'</div><button class="go" onclick="revelar()">'+(last?'📒':'➡️')+'</button>';
+  burst();sfx(x.novo?'win':'ok');
+}
+
+/* ---------- Álbum de países ---------- */
+var SEC=[['América do Sul','🌎'],['América do Norte','🌎'],['América Central','🌎'],['Europa','🌍'],['Ásia','🌏'],['África','🌍'],['Oceania','🌏']];
+function secDe(p){return p.ct==='Europa e Ásia'?'Europa':p.ct==='Ásia e Europa'?'Ásia':p.ct;}
+function ciHTML(p){return ST.col[p.c]?'<button class="ci" onclick="verCarta(\''+p.c+'\')">'+flag(p.c)+'<span>'+p.n+'</span>'+(ST.newc[p.c]?'<em>NOVA</em>':'')+'</button>':'<div class="ci off">'+flag(p.c)+'<span>?</span></div>';}
+function colHTML(){
+  var n=Object.keys(ST.col).length,h='<div class="card"><div class="ask">📒</div><div class="cnt">'+n+' / '+PAISES.length+'</div></div>';
+  SEC.forEach(function(s){
+    var ps=PAISES.filter(function(p){return secDe(p)===s[0];}),have=ps.filter(function(p){return ST.col[p.c];}).length;
+    h+='<div class="sec" style="border-left-color:'+(CCOL[s[0]]||'#2f7bff')+'"><span>'+s[1]+' '+s[0]+'</span><b>'+have+'/'+ps.length+'</b></div><div class="cg">'+ps.map(ciHTML).join('')+'</div>';
+  });
+  return h;
+}
+function cardHTML(c){var p=pais(c);return '<div class="cc" style="--k:'+(CCOL[p.ct]||'#2f7bff')+'"><div class="cf">'+flag(c)+'</div><div class="cn">'+p.n+'</div><div class="cr">🏛️ '+p.cap+'</div><div class="cr">🌎 '+p.ct+'</div><div class="cq">💡 '+p.cu+'</div></div>';}
+function falaCarta(c){var p=pais(c);say(p.n+'. A capital é '+p.cap+'. '+p.cu);}
+function verCarta(c){
+  delete ST.newc[c];save();HP=2;cur=home;
+  app.innerHTML='<div class="top"><button onclick="home()">⬅️</button><span></span>'+(ST.vz===true?'<button onclick="falaCarta(\''+c+'\')">🔊</button>':'<span></span>')+'</div>'+cardHTML(c);
+  if(ST.vz===true)falaCarta(c);
+}
 function setBg(){document.body.style.backgroundImage='url('+(innerWidth>innerHeight?IMGS.bgl:IMGS.bg)+')';}
 setBg();addEventListener('resize',setBg);
 try{if('serviceWorker'in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('sw.js').catch(()=>{});}catch(e){}
 /* emojis do sistema -> imagens locais (Fluent Emoji) */
-var EMJ={"▶️": "emoji/25b6.webp", "▶": "emoji/25b6.webp", "⚖️": "emoji/2696.webp", "⚖": "emoji/2696.webp", "⚙️": "emoji/2699.webp", "⚙": "emoji/2699.webp", "✅": "emoji/2705.webp", "✅️": "emoji/2705.webp", "✖️": "emoji/2716.webp", "✖": "emoji/2716.webp", "✨": "emoji/2728.webp", "✨️": "emoji/2728.webp", "➕": "emoji/2795.webp", "➕️": "emoji/2795.webp", "➖": "emoji/2796.webp", "➖️": "emoji/2796.webp", "➗": "emoji/2797.webp", "➗️": "emoji/2797.webp", "➡️": "emoji/27a1.webp", "➡": "emoji/27a1.webp", "⬅️": "emoji/2b05.webp", "⬅": "emoji/2b05.webp", "⭐": "emoji/2b50.webp", "⭐️": "emoji/2b50.webp", "🌈": "emoji/1f308.webp", "🌈️": "emoji/1f308.webp", "🌱": "emoji/1f331.webp", "🌱️": "emoji/1f331.webp", "🌳": "emoji/1f333.webp", "🌳️": "emoji/1f333.webp", "🌿": "emoji/1f33f.webp", "🌿️": "emoji/1f33f.webp", "🍌": "emoji/1f34c.webp", "🍌️": "emoji/1f34c.webp", "🍎": "emoji/1f34e.webp", "🍎️": "emoji/1f34e.webp", "🍓": "emoji/1f353.webp", "🍓️": "emoji/1f353.webp", "🍪": "emoji/1f36a.webp", "🍪️": "emoji/1f36a.webp", "🎈": "emoji/1f388.webp", "🎈️": "emoji/1f388.webp", "🎉": "emoji/1f389.webp", "🎉️": "emoji/1f389.webp", "🎣": "emoji/1f3a3.webp", "🎣️": "emoji/1f3a3.webp", "🎨": "emoji/1f3a8.webp", "🎨️": "emoji/1f3a8.webp", "🎮": "emoji/1f3ae.webp", "🎮️": "emoji/1f3ae.webp", "🎵": "emoji/1f3b5.webp", "🎵️": "emoji/1f3b5.webp", "🏠": "emoji/1f3e0.webp", "🏠️": "emoji/1f3e0.webp", "🐟": "emoji/1f41f.webp", "🐟️": "emoji/1f41f.webp", "🐶": "emoji/1f436.webp", "🐶️": "emoji/1f436.webp", "🐻": "emoji/1f43b.webp", "🐻️": "emoji/1f43b.webp", "💪": "emoji/1f4aa.webp", "💪️": "emoji/1f4aa.webp", "💬": "emoji/1f4ac.webp", "💬️": "emoji/1f4ac.webp", "💰": "emoji/1f4b0.webp", "💰️": "emoji/1f4b0.webp", "📒": "emoji/1f4d2.webp", "📒️": "emoji/1f4d2.webp", "🔁": "emoji/1f501.webp", "🔁️": "emoji/1f501.webp", "🔇": "emoji/1f507.webp", "🔇️": "emoji/1f507.webp", "🔉": "emoji/1f509.webp", "🔉️": "emoji/1f509.webp", "🔊": "emoji/1f50a.webp", "🔊️": "emoji/1f50a.webp", "🔍": "emoji/1f50d.webp", "🔍️": "emoji/1f50d.webp", "🔔": "emoji/1f514.webp", "🔔️": "emoji/1f514.webp", "🔢": "emoji/1f522.webp", "🔢️": "emoji/1f522.webp", "🕵️": "emoji/1f575.webp", "🕵": "emoji/1f575.webp", "🚂": "emoji/1f682.webp", "🚂️": "emoji/1f682.webp", "🚗": "emoji/1f697.webp", "🚗️": "emoji/1f697.webp", "🛒": "emoji/1f6d2.webp", "🛒️": "emoji/1f6d2.webp", "🟰": "emoji/1f7f0.webp", "🟰️": "emoji/1f7f0.webp", "🥕": "emoji/1f955.webp", "🥕️": "emoji/1f955.webp", "🦆": "emoji/1f986.webp", "🦆️": "emoji/1f986.webp", "🧁": "emoji/1f9c1.webp", "🧁️": "emoji/1f9c1.webp", "🧠": "emoji/1f9e0.webp", "🧠️": "emoji/1f9e0.webp", "🧩": "emoji/1f9e9.webp", "🧩️": "emoji/1f9e9.webp", "🧺": "emoji/1f9fa.webp", "🧺️": "emoji/1f9fa.webp", "🪙": "emoji/1fa99.webp", "🪙️": "emoji/1fa99.webp"};
+var EMJ={"▶️": "emoji/25b6.webp", "▶": "emoji/25b6.webp", "⚖️": "emoji/2696.webp", "⚖": "emoji/2696.webp", "⚙️": "emoji/2699.webp", "⚙": "emoji/2699.webp", "✅": "emoji/2705.webp", "✅️": "emoji/2705.webp", "✖️": "emoji/2716.webp", "✖": "emoji/2716.webp", "✨": "emoji/2728.webp", "✨️": "emoji/2728.webp", "❌": "emoji/274c.webp", "❌️": "emoji/274c.webp", "➕": "emoji/2795.webp", "➕️": "emoji/2795.webp", "➖": "emoji/2796.webp", "➖️": "emoji/2796.webp", "➗": "emoji/2797.webp", "➗️": "emoji/2797.webp", "➡️": "emoji/27a1.webp", "➡": "emoji/27a1.webp", "⬅️": "emoji/2b05.webp", "⬅": "emoji/2b05.webp", "⭐": "emoji/2b50.webp", "⭐️": "emoji/2b50.webp", "🌈": "emoji/1f308.webp", "🌈️": "emoji/1f308.webp", "🌍": "emoji/1f30d.webp", "🌍️": "emoji/1f30d.webp", "🌎": "emoji/1f30e.webp", "🌎️": "emoji/1f30e.webp", "🌏": "emoji/1f30f.webp", "🌏️": "emoji/1f30f.webp", "🌱": "emoji/1f331.webp", "🌱️": "emoji/1f331.webp", "🌳": "emoji/1f333.webp", "🌳️": "emoji/1f333.webp", "🌿": "emoji/1f33f.webp", "🌿️": "emoji/1f33f.webp", "🍌": "emoji/1f34c.webp", "🍌️": "emoji/1f34c.webp", "🍎": "emoji/1f34e.webp", "🍎️": "emoji/1f34e.webp", "🍓": "emoji/1f353.webp", "🍓️": "emoji/1f353.webp", "🍪": "emoji/1f36a.webp", "🍪️": "emoji/1f36a.webp", "🎁": "emoji/1f381.webp", "🎁️": "emoji/1f381.webp", "🎈": "emoji/1f388.webp", "🎈️": "emoji/1f388.webp", "🎉": "emoji/1f389.webp", "🎉️": "emoji/1f389.webp", "🎣": "emoji/1f3a3.webp", "🎣️": "emoji/1f3a3.webp", "🎨": "emoji/1f3a8.webp", "🎨️": "emoji/1f3a8.webp", "🎮": "emoji/1f3ae.webp", "🎮️": "emoji/1f3ae.webp", "🎵": "emoji/1f3b5.webp", "🎵️": "emoji/1f3b5.webp", "🏆": "emoji/1f3c6.webp", "🏆️": "emoji/1f3c6.webp", "🏛️": "emoji/1f3db.webp", "🏛": "emoji/1f3db.webp", "🏠": "emoji/1f3e0.webp", "🏠️": "emoji/1f3e0.webp", "🐟": "emoji/1f41f.webp", "🐟️": "emoji/1f41f.webp", "🐶": "emoji/1f436.webp", "🐶️": "emoji/1f436.webp", "🐻": "emoji/1f43b.webp", "🐻️": "emoji/1f43b.webp", "💡": "emoji/1f4a1.webp", "💡️": "emoji/1f4a1.webp", "💪": "emoji/1f4aa.webp", "💪️": "emoji/1f4aa.webp", "💬": "emoji/1f4ac.webp", "💬️": "emoji/1f4ac.webp", "💰": "emoji/1f4b0.webp", "💰️": "emoji/1f4b0.webp", "📊": "emoji/1f4ca.webp", "📊️": "emoji/1f4ca.webp", "📒": "emoji/1f4d2.webp", "📒️": "emoji/1f4d2.webp", "🔁": "emoji/1f501.webp", "🔁️": "emoji/1f501.webp", "🔇": "emoji/1f507.webp", "🔇️": "emoji/1f507.webp", "🔉": "emoji/1f509.webp", "🔉️": "emoji/1f509.webp", "🔊": "emoji/1f50a.webp", "🔊️": "emoji/1f50a.webp", "🔍": "emoji/1f50d.webp", "🔍️": "emoji/1f50d.webp", "🔔": "emoji/1f514.webp", "🔔️": "emoji/1f514.webp", "🔢": "emoji/1f522.webp", "🔢️": "emoji/1f522.webp", "🕵️": "emoji/1f575.webp", "🕵": "emoji/1f575.webp", "🚂": "emoji/1f682.webp", "🚂️": "emoji/1f682.webp", "🚗": "emoji/1f697.webp", "🚗️": "emoji/1f697.webp", "🛒": "emoji/1f6d2.webp", "🛒️": "emoji/1f6d2.webp", "🟰": "emoji/1f7f0.webp", "🟰️": "emoji/1f7f0.webp", "🥇": "emoji/1f947.webp", "🥇️": "emoji/1f947.webp", "🥈": "emoji/1f948.webp", "🥈️": "emoji/1f948.webp", "🥉": "emoji/1f949.webp", "🥉️": "emoji/1f949.webp", "🥕": "emoji/1f955.webp", "🥕️": "emoji/1f955.webp", "🦆": "emoji/1f986.webp", "🦆️": "emoji/1f986.webp", "🧁": "emoji/1f9c1.webp", "🧁️": "emoji/1f9c1.webp", "🧠": "emoji/1f9e0.webp", "🧠️": "emoji/1f9e0.webp", "🧩": "emoji/1f9e9.webp", "🧩️": "emoji/1f9e9.webp", "🧺": "emoji/1f9fa.webp", "🧺️": "emoji/1f9fa.webp", "🪙": "emoji/1fa99.webp", "🪙️": "emoji/1fa99.webp"};
 (function(){
   var keys=Object.keys(EMJ).sort(function(a,b){return b.length-a.length;});
   var re=new RegExp(keys.join('|'),'g'),obs;
