@@ -8,8 +8,8 @@
 <meta name="theme-color" content="#9fdcff">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<link rel="icon" href="icon-192.png">
-<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="icon" href="icone-192.png">
+<link rel="apple-touch-icon" href="icone-192.png">
 <style>
 @font-face{font-family:'Fredoka';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/fredoka-latin-500-normal.woff2') format('woff2')}
 @font-face{font-family:'Fredoka';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/fredoka-latin-600-normal.woff2') format('woff2')}
@@ -214,6 +214,7 @@ h2.big{font-size:2.6rem;margin:.2rem 0}
 .pball::after{content:"";position:absolute;left:50%;top:50%;width:.5em;height:.5em;margin:-.25em 0 0 -.25em;border-radius:50%;background:#fff;border:.1em solid #222}
 .pball.sm{width:1.3em;height:1.3em;vertical-align:-.25em}.pball.xl{width:6rem;height:6rem}
 .ctabs{display:flex;margin:.4rem 0}.ct{flex:1;margin:0 .3rem;font-size:1.3rem;padding:.6rem 0;--c:#8b97b8}.ct.on{--c:var(--sun);color:#5a3b00;text-shadow:none}
+.logo{width:2.6rem;height:2.6rem;border-radius:.7rem;vertical-align:-.7rem;box-shadow:0 .15rem .4rem rgba(0,0,0,.25)}
 </style>
 </head>
 <body>
@@ -589,7 +590,7 @@ function mvol(){return Math.pow((ST.mvol==null?20:ST.mvol)/100,2)*.3;}
 var DT=null;function duck(ms){if(!MU)return;try{MU.volume=mvol()*.3;clearTimeout(DT);DT=setTimeout(function(){MU.volume=mvol();},ms);}catch(e){}}
 function startScreen(){
   if(!musicOn())return home();
-  cur=home;app.innerHTML='<div class="stt"><h1>🌈 Cantinho dos Números</h1><button class="go" onclick="musicStart();home()">▶️ Jogar</button></div>';
+  cur=home;app.innerHTML='<div class="stt"><h1><img class="logo" src="icone-192.png" alt=""> Cantinho dos Números</h1><button class="go" onclick="musicStart();home()">▶️ Jogar</button></div>';
 }
 function volPanel(){
   var o=document.getElementById('vp');if(o){o.remove();return;}
